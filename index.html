@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f4">
+  <meta name="description" content="One booster. Ten lands. A whole new game. Learn MTG Pack Battle and roll your starting Treasure, Clue, Map, and Lander tokens.">
+  <title>MTG Pack Battle — A little pack. A big adventure.</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#" aria-label="MTG Pack Battle home"><img src="./assets/favicon.svg" width="32" height="32" alt=""><span>PACK BATTLE<span class="brand-sub">A MAGIC: THE GATHERING VARIANT</span></span></a>
+    <nav aria-label="Main navigation"><a href="#rules">The rules</a><a href="#tokens">The tokens</a><a class="nav-roll" href="#randomizer">Roll your tokens <span aria-hidden="true">✧</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="small-star" aria-hidden="true">✳</span> LESS BUILDING. MORE PLAYING.</p>
+        <h1 id="hero-title">A little pack.<br>A big <em>adventure.</em></h1>
+        <p class="hero-description">Grab a booster, add ten lands, and see what happens. A casual two-player Magic format for making the most of whatever you open.</p>
+        <div class="hero-actions"><a class="button primary" href="#randomizer">Roll your starting tokens <span aria-hidden="true">✧</span></a><a class="text-link" href="#rules">Learn to play</a></div>
+        <div class="hero-facts"><span>1 booster each</span><span>2 players</span><span>Endless possibilities</span></div>
+      </div>
+      <div class="hero-art" aria-label="A selection of starting token cards"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="art-star star-one" aria-hidden="true">✧</span><span class="art-star star-two" aria-hidden="true">✦</span><div id="hero-cards" class="card-fan"></div><p class="art-caption">A few supplies for the journey.</p></div>
+    </section>
+    <div class="quick-start wrap" aria-label="Game at a glance">
+      <div><strong>01</strong><span>Open a booster<small>Any set. Your choice.</small></span></div>
+      <div><strong>+10</strong><span>Add basic lands<small>Every color is on the table.</small></span></div>
+      <div><strong>20</strong><span>Starting life<small>Five cards. No mulligans.</small></span></div>
+      <div><span class="quick-symbol" aria-hidden="true">✧</span><span>A little head start<small>Optional tokens. Extra possibilities.</small></span></div>
+    </div>
+    <section class="rules-section wrap section" id="rules" aria-labelledby="rules-title">
+      <div class="section-intro"><p class="eyebrow">THE FORMAT</p><h2 id="rules-title">Open. Shuffle. Play.</h2><p>No deckbuilding homework. Just two boosters, a handful of lands, and a willingness to improvise.</p><aside class="emblem"><span class="emblem-label">YOUR STARTING EMBLEM</span><p>Basic lands you control have<br>“{T}: Add one mana of any color.”</p><small>Added flexibility. All existing mana abilities still apply.</small><div class="mana-colors" aria-label="White, blue, black, red, green"><i></i><i></i><i></i><i></i><i></i></div></aside></div>
+      <div class="rules-list">
+        <article><span class="rule-number">01</span><div><h3>One pack is your deck.</h3><p>Each player opens one booster. Different sets are welcome! Remove tokens, ads, art cards, and other non-playable inserts. Keep every playable card, including any basic lands.</p></div></article>
+        <article><span class="rule-number">02</span><div><h3>Bring ten more lands.</h3><p>Add 10 basic lands of your choice, then shuffle. Each player starts with the emblem shown here, so your basics can produce any color of mana.</p></div></article>
+        <article><span class="rule-number">03</span><div><h3>Small hand. Fresh start.</h3><p>Start at 20 life. Draw five cards, with no mulligans. Randomly choose who decides to play or draw. The starting player skips their first draw step.</p></div></article>
+        <article><span class="rule-number">04</span><div><h3>An empty library isn’t the end. Yet.</h3><p>When you would draw from an empty library, lose 5 life, shuffle your graveyard into your library, then try that draw again. You lose if your life reaches zero or your library is still empty. Resolve multiple-card draws one card at a time.</p></div></article>
+        <article><span class="rule-number">05</span><div><h3>Pack a few supplies. <span class="badge">OPTIONAL</span></h3><p>Agree on a token pool and count before playing. Roll below for each player, or agree to share a roll. Each player creates their assigned tokens untapped at the beginning of their first upkeep.</p></div></article>
+        <p class="rules-footnote">All other normal two-player Magic rules apply. This version uses one booster per player.</p>
+      </div>
+    </section>
+    <section class="randomizer-section" id="randomizer" aria-labelledby="randomizer-title"><div class="wrap section">
+      <div class="section-heading"><div><p class="eyebrow">A LITTLE LUCK GOES A LONG WAY</p><h2 id="randomizer-title">Pack your supplies.</h2></div><p>Choose your pool. Pick a count.<br>Let chance take it from there.</p></div>
+      <noscript><p class="notice">Enable JavaScript to use the token randomizer. The complete game rules are available above.</p></noscript>
+      <div class="randomizer-layout">
+        <form id="roll-form" class="controls-panel">
+          <label class="field-label" for="preset">Token pool</label><select id="preset" name="preset"><option value="supplies">Supplies</option><option value="custom">Custom</option></select>
+          <fieldset><legend>Include in your roll</legend><div id="pool-options" class="pool-options"></div></fieldset>
+          <div class="pool-actions"><button type="button" id="select-all">Select all</button><span aria-hidden="true">·</span><button type="button" id="clear-all">Clear</button><span id="pool-count">4 selected</span></div>
+          <div class="count-field"><label class="field-label" for="token-count">Number of tokens</label><input type="number" id="token-count" name="count" min="1" max="20" step="1" value="1" inputmode="numeric" required aria-describedby="roll-validation"></div>
+          <label class="duplicates-label"><input type="checkbox" id="allow-duplicates" name="duplicates"><span>Allow duplicates<small>The same token can appear more than once.</small></span></label>
+          <p id="roll-validation" class="validation" aria-live="polite"></p>
+          <button class="button primary roll-button" id="roll-button" type="submit" disabled>Roll tokens <span aria-hidden="true">✧</span></button>
+          <p class="saved-note" id="saved-note">Your preferences stay in this browser.</p>
+        </form>
+        <div class="results-panel"><div class="results-heading"><span class="eyebrow">YOUR STARTING TOKENS</span><span id="result-meta">Ready when you are</span></div><p id="roll-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p><div id="results" class="results"><div class="empty-state"><div class="empty-card" aria-hidden="true"><span>✧</span></div><h3>A little possibility awaits.</h3><p>Roll to discover your starting supplies.<br>Every token in your pool has an equal chance.</p></div></div><p class="results-note">Create these tokens at the beginning of your first upkeep.<br>Roll again for the other player, or share a roll by agreement.</p></div>
+      </div>
+    </div></section>
+    <section class="wrap section token-section" id="tokens" aria-labelledby="tokens-title"><div class="section-heading"><div><p class="eyebrow">KNOW YOUR SUPPLIES</p><h2 id="tokens-title">Small tokens. Big potential.</h2></div><p>Four ways to get a little further.<br>Select a card to take a closer look.</p></div><div id="token-reference" class="token-reference"></div><p class="token-tip"><strong>A note on Map:</strong> Exploring needs a creature you control. Reveal your library’s top card: a land goes to your hand; otherwise, put a +1/+1 counter on the creature, then keep the revealed card on top or put it in your graveyard.</p></section>
+    <section class="closing wrap"><span aria-hidden="true">✳</span><h2>The best deck is the one<br>you haven’t opened yet.</h2><a class="text-link" href="#randomizer">Let’s see what you get</a></section>
+  </main>
+  <footer class="wrap"><div><a class="footer-brand" href="#">MTG PACK BATTLE</a><p>A small format for a big game. Made by <a href="https://ashton.website">Ashton</a>.</p></div><p class="attribution">An unofficial fan project, unaffiliated with Wizards of the Coast.<br>Magic: The Gathering and card artwork © Wizards of the Coast.<br>Card images and data via <a href="https://scryfall.com">Scryfall</a>. Artist credits on each card.<br><a href="https://github.com/ashears/MTG-Pack-Battle">View on GitHub</a></p></footer>
+  <dialog id="card-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><h2 id="dialog-title"></h2><button id="close-dialog" type="button" aria-label="Close card view">Close <span aria-hidden="true">×</span></button></div><div id="dialog-content"></div></dialog>
+</body>
+</html>
