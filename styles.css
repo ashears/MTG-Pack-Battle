@@ -42,6 +42,7 @@ h3 { font-size: 1rem; font-weight: 600; }
 .rules-list .rule-steps { margin: 0; padding: 0; list-style: decimal inside; font-size: .9375rem; }
 .rule-steps > li { margin-bottom: .45rem; }
 .rule-steps > li:last-child { margin-bottom: 0; }
+.rule-conclusion { margin-top: 10px; text-align: center; }
 @media (min-width: 601px) and (max-width: 959px) {
   .rules-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
