@@ -30,6 +30,10 @@ npm run build
 - Optional starting tokens: agree on the pool and count, roll individually or share a roll by agreement, then each player creates their assigned tokens untapped at the beginning of their first upkeep.
 - Other normal two-player Magic rules apply. Multiple-booster rules are not defined in v1.
 
+## Banner artwork
+
+`assets/banner.webp` is the supplied planeswalker image. CSS displays it as a shallow banner (128px on larger screens, 96px on phones) without modifying the original image. The description follows the banner, then the six rules use a responsive three-, two-, or one-column layout.
+
 ## Expand the catalog
 
 `data/tokens.js` stores one record per mechanical token type: stable `id`, `name`, `rulesText`, `imageUrl`, `sourceUrl`, and `artist`. Artwork does not create an additional roll option. Add future token records there; controls and reference cards render automatically.

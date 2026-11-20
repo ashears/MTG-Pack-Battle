@@ -7,24 +7,43 @@
   <meta name="description" content="Custom Magic Ruleset to play a game with a single pack per player. Rules and a starting-token randomizer.">
   <title>MTG Pack Battle</title>
   <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-  <link rel="stylesheet" href="./styles.css?v=1.1.0">
+  <link rel="stylesheet" href="./styles.css?v=1.2.0">
   <script type="module" src="./js/app.js?v=1.1.0"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <main id="main">
     <div class="wrap intro">
+      <img class="banner-art" src="./assets/banner.webp" width="1080" height="607" alt="" fetchpriority="high">
       <h1>Custom Magic Ruleset to play a game with a single pack per player.</h1>
     </div>
     <section class="wrap section rules-section" id="rules" aria-labelledby="rules-title">
       <h2 id="rules-title">Rules</h2>
-      <ol class="rules-list">
-        <li><strong>Deck:</strong> Each player opens one booster pack. The packs do not need to be from the same set. Remove tokens and non-playable inserts, such as ads and art cards. All remaining cards are your deck, including any basic lands.</li>
-        <li><strong>Lands:</strong> Add 10 basic lands of any type to your deck, then shuffle.</li>
-        <li><strong>Emblem:</strong> Each player starts with an emblem that says: <blockquote>Basic lands you control have “{T}: Add one mana of any color.”</blockquote>Basic lands keep their existing abilities.</li>
-        <li><strong>Starting the game:</strong> Start at 20 life and draw five cards. No mulligans. Randomly choose who decides to play or draw. The player going first skips their first draw step.</li>
-        <li><strong>Empty library:</strong> If you would draw from an empty library, lose 5 life, shuffle your graveyard into your library, then draw. You lose if your life reaches zero or your library is still empty. Resolve multiple-card draws one card at a time.</li>
-        <li><strong>Optional starting tokens:</strong> Agree on a token pool and count before playing. Use the <a href="#randomizer">randomizer</a> to roll separately for each player, or agree to use the same result. Each player creates their tokens untapped at the beginning of their first upkeep.</li>
+      <ol class="rules-list" role="list">
+        <li>
+          <span class="rule-index" aria-hidden="true">1</span>
+          <div><h3>Deck</h3><p>Each player opens one booster pack. The packs do not need to be from the same set. Remove tokens and non-playable inserts, such as ads and art cards. All remaining cards are your deck, including any basic lands.</p></div>
+        </li>
+        <li>
+          <span class="rule-index" aria-hidden="true">2</span>
+          <div><h3>Lands</h3><p>Add 10 basic lands of any type to your deck, then shuffle.</p></div>
+        </li>
+        <li>
+          <span class="rule-index" aria-hidden="true">3</span>
+          <div><h3>Emblem</h3><p>Each player starts with this emblem:</p><blockquote>Basic lands you control have “{T}: Add one mana of any color.”</blockquote><p>Basic lands keep their existing abilities.</p></div>
+        </li>
+        <li>
+          <span class="rule-index" aria-hidden="true">4</span>
+          <div><h3>Starting the game</h3><p>Start at 20 life and draw five cards. No mulligans. Randomly choose who decides to play or draw. The player going first skips their first draw step.</p></div>
+        </li>
+        <li>
+          <span class="rule-index" aria-hidden="true">5</span>
+          <div><h3>Empty library</h3><p>If you would draw from an empty library, lose 5 life, shuffle your graveyard into your library, then draw. You lose if your life reaches zero or your library is still empty. Resolve multiple-card draws one card at a time.</p></div>
+        </li>
+        <li>
+          <span class="rule-index" aria-hidden="true">6</span>
+          <div><h3>Optional starting tokens</h3><p>Agree on a token pool and count before playing. Use the <a href="#randomizer">randomizer</a> to roll separately for each player, or agree to use the same result. Each player creates their tokens untapped at the beginning of their first upkeep.</p></div>
+        </li>
       </ol>
       <p class="rules-footnote">All other normal two-player Magic rules apply.</p>
     </section>
