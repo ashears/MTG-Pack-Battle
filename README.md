@@ -32,11 +32,11 @@ npm run build
 
 ## Expand the catalog
 
-`data/tokens.js` stores one record per mechanical token type: stable `id`, `name`, `rulesText`, `imageUrl`, `sourceUrl`, `artist`, and `tagline`. Artwork does not create an additional roll option. Add future token records there; controls and reference cards render automatically. Hero artwork uses Treasure, Clue, and Lander.
+`data/tokens.js` stores one record per mechanical token type: stable `id`, `name`, `rulesText`, `imageUrl`, `sourceUrl`, and `artist`. Artwork does not create an additional roll option. Add future token records there; controls and reference cards render automatically.
 
 `data/presets.js` is a separate list of named presets containing `id`, `name`, and `tokenIds`. The initial **Supplies** preset contains Treasure, Clue, Map, and Lander. Add IDs explicitly to a preset when extending it; this prevents catalog additions from silently altering existing pools. Update the intentional initial-catalog assertions in the tests when expanding the catalog.
 
-Retrieve representative card metadata from the Scryfall API during maintenance, with an identifying User-Agent and Accept header and within its rate limits. Copy the canonical rules, image URL, source URL, and artist into the catalog. The browser never requests the API. Card images load directly from Scryfall's image service; Google Fonts supplies optional typography, with system fallbacks. Image failures show the token name, while rules remain readable. Rolling works if external images or fonts are unavailable.
+Retrieve representative card metadata from the Scryfall API during maintenance, with an identifying User-Agent and Accept header and within its rate limits. Copy the canonical rules, image URL, source URL, and artist into the catalog. The browser never requests the API. Card images load directly from Scryfall's image service. Image failures show the token name, while rules remain readable. Rolling works if external images are unavailable.
 
 Settings are stored under `mtg-pack-battle.settings.v1` in localStorage. No accounts, analytics, server, or API keys are required. Blocked browser storage falls back to in-memory settings. Rolled results are ephemeral.
 

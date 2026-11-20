@@ -10,7 +10,7 @@ test('catalog has unique stable IDs, real images, readable rules, and source cre
   assert.equal(new Set(ids).size, tokens.length);
   assert.deepEqual(ids, ['treasure', 'clue', 'map', 'lander']);
   for (const token of tokens) {
-    for (const key of ['id', 'name', 'rulesText', 'artist', 'tagline']) assert.ok(token[key]?.trim());
+    for (const key of ['id', 'name', 'rulesText', 'artist']) assert.ok(token[key]?.trim());
     assert.equal(new URL(token.imageUrl).hostname, 'cards.scryfall.io');
     assert.equal(new URL(token.sourceUrl).hostname, 'scryfall.com');
   }

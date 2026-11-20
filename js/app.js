@@ -27,7 +27,7 @@ function image(token, className = '', detailedFallback = false) {
   img.height = 680;
   img.addEventListener('error', () => {
     const fallback = element('div', 'image-fallback');
-    fallback.append(element('span', '', '✧'), element('strong', '', token.name));
+    fallback.append(element('strong', '', token.name));
     if (detailedFallback) fallback.append(element('span', 'fallback-rules', token.rulesText));
     fallback.append(element('small', '', 'Card image unavailable'));
     img.replaceWith(fallback);
@@ -53,7 +53,7 @@ function credit(token) {
   return p;
 }
 
-function tokenCard(token, reference = false) {
+function tokenCard(token) {
   const article = element('article', 'token-card');
   const button = element('button', 'card-image-button');
   button.type = 'button';
@@ -61,23 +61,13 @@ function tokenCard(token, reference = false) {
   button.append(image(token));
   button.addEventListener('click', () => showCard(token));
   const heading = element('h3', '', token.name);
-  if (reference) heading.append(element('span', '', 'ARTIFACT'));
   article.append(button, heading);
-  if (reference) article.append(element('p', 'token-tagline', token.tagline));
   article.append(element('p', 'token-rules', token.rulesText), credit(token));
   return article;
 }
 
-for (const id of ['treasure', 'clue', 'lander']) {
-  const token = byId.get(id);
-  const card = element('div', 'fan-card');
-  const img = image(token);
-  img.loading = 'eager';
-  card.append(img);
-  $('#hero-cards').append(card);
-}
 for (const token of tokens) {
-  $('#token-reference').append(tokenCard(token, true));
+  $('#token-reference').append(tokenCard(token));
   const label = element('label', 'pool-choice');
   const checkbox = element('input');
   checkbox.type = 'checkbox';
