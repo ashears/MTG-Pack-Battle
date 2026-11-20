@@ -32,8 +32,8 @@ h3 { font-size: 1rem; font-weight: 600; }
 .rules-section { padding-top: 24px; }
 .rules-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); list-style: none; padding: 0; margin: 18px 0; gap: 16px; }
 .rules-list > li { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; background: #fff; }
-.rule-header { display: flex; align-items: center; gap: 12px; padding: 16px 18px; background: #235b93; color: #fff; }
-.rule-body { flex: 1; padding: 18px; text-align: center; }
+.rule-header { display: flex; align-items: center; flex-shrink: 0; min-height: calc(3rem + 32px); gap: 12px; padding: 16px 18px; background: #235b93; color: #fff; }
+.rule-body { flex: 1; padding: 18px; text-align: left; }
 .rule-index { display: grid; place-items: center; width: 26px; height: 26px; flex-shrink: 0; border-radius: 50%; background: #fff; color: #235b93; font-size: .8125rem; font-weight: 650; }
 .rules-list h3 { line-height: 1.5; }
 .rules-list p, .rules-list blockquote { font-size: .9375rem; }
