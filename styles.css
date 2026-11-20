@@ -32,10 +32,10 @@ h3 { font-size: 1rem; font-weight: 600; }
 .rules-section { padding-top: 24px; }
 .rules-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); list-style: none; padding: 0; margin: 18px 0; gap: 16px; }
 .rules-list > li { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; background: #fff; }
-.rule-header { display: flex; align-items: center; flex-shrink: 0; min-height: calc(3rem + 32px); gap: 12px; padding: 16px 18px; background: #235b93; color: #fff; }
+.rule-header { display: flex; align-items: center; flex-shrink: 0; min-height: calc(2.5rem + 20px); gap: 10px; padding: 10px 18px; background: #235b93; color: #fff; }
 .rule-body { flex: 1; padding: 18px; text-align: left; }
 .rule-index { display: grid; place-items: center; width: 26px; height: 26px; flex-shrink: 0; border-radius: 50%; background: #fff; color: #235b93; font-size: .8125rem; font-weight: 650; }
-.rules-list h3 { line-height: 1.5; }
+.rules-list h3 { line-height: 1.25; }
 .rules-list p, .rules-list blockquote { font-size: .9375rem; }
 .rules-list blockquote { padding: 8px 12px; }
 .rules-list .rule-steps { margin: 0; padding: 0; list-style: decimal inside; font-size: .9375rem; }
@@ -46,7 +46,7 @@ h3 { font-size: 1rem; font-weight: 600; }
 }
 @media (max-width: 600px) {
   .rules-list { grid-template-columns: 1fr; gap: 12px; }
-  .rule-header { padding: 14px 16px; }
+  .rule-header { padding: 10px 16px; }
   .rule-body { padding: 16px; }
   .banner-header { margin-bottom: 14px; }
   .banner-nav { right: 12px; bottom: 12px; }
