@@ -32,7 +32,7 @@ npm run build
 
 ## Banner artwork
 
-`assets/banner.webp` is the supplied planeswalker image. CSS displays it as a shallow banner (128px on larger screens, 96px on phones) without modifying the original image. A button over the banner opens `randomizer.html`, which contains the randomizer and token reference. The description follows the banner, then the six rules use a responsive three-, two-, or one-column layout.
+`assets/banner.webp` is the supplied Planeswalker artwork. Both pages show five portrait crops from that image. The portrait rules in `styles.css` set the face coordinates and panel boundaries in source-image pixels. The Token randomizer button sits over the homepage banner. The Game rules button sits below the banner on the randomizer page.
 
 ## Expand the catalog
 
