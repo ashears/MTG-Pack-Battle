@@ -26,17 +26,20 @@ h3 { font-size: 1rem; font-weight: 600; }
 .section { padding-block: 32px; }
 .rules-section { padding-top: 24px; }
 .rules-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); list-style: none; padding: 0; margin: 18px 0; gap: 16px; }
-.rules-list li { display: grid; grid-template-columns: 26px minmax(0, 1fr); align-content: start; gap: 12px; padding: 18px; border: 1px solid var(--line); border-radius: 4px; border-top: 3px solid #7e8a9a; }
+.rules-list > li { display: grid; grid-template-columns: 26px minmax(0, 1fr); align-content: start; gap: 12px; padding: 18px; border: 1px solid var(--line); border-radius: 4px; border-top: 3px solid #7e8a9a; }
 .rule-index { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: #eef1f4; color: #465363; font-size: .8125rem; font-weight: 650; }
 .rules-list h3 { line-height: 1.5; margin-bottom: 9px; }
 .rules-list p, .rules-list blockquote { font-size: .9375rem; }
 .rules-list blockquote { padding: 8px 12px; }
+.rules-list .rule-steps { margin: 0; padding-left: 1.35rem; list-style: decimal; font-size: .9375rem; }
+.rule-steps > li { margin-bottom: .45rem; padding-left: .2rem; }
+.rule-steps > li:last-child { margin-bottom: 0; }
 @media (min-width: 601px) and (max-width: 959px) {
   .rules-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 600px) {
   .rules-list { grid-template-columns: 1fr; gap: 12px; }
-  .rules-list li { padding: 16px; }
+  .rules-list > li { padding: 16px; }
   .banner-art { height: 96px; margin-bottom: 14px; }
 }
 blockquote { margin: 10px 0; padding: 8px 16px; border-left: 3px solid #a9afb5; background: #f6f7f8; }

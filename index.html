@@ -7,7 +7,7 @@
   <meta name="description" content="Custom Magic Ruleset to play a game with a single pack per player. Rules and a starting-token randomizer.">
   <title>MTG Pack Battle</title>
   <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-  <link rel="stylesheet" href="./styles.css?v=1.2.0">
+  <link rel="stylesheet" href="./styles.css?v=1.2.1">
   <script type="module" src="./js/app.js?v=1.1.0"></script>
 </head>
 <body>
@@ -22,12 +22,14 @@
       <ol class="rules-list" role="list">
         <li>
           <span class="rule-index" aria-hidden="true">1</span>
-          <div><h3>Build a deck from a single Booster Pack</h3><p> Remove tokens and non-playable inserts, such as ads and art cards. <b></b>All remaining cards are your deck, including any basic lands.</p></div>
+          <div><h3>Build a deck from a single Booster Pack</h3><p>Remove tokens and non-playable inserts, such as ads and art cards. All remaining cards are your deck, including any basic lands.</p></div>
         </li>
         <li>
           <span class="rule-index" aria-hidden="true">2</span>
-          <div><h3>Add 10 Basic Lands</h3></div>
-          <p>2 Basic Lands of each Color</p>
+          <div>
+            <h3>Add 10 Basic Lands</h3>
+            <p>2 Basic Lands of each Color</p>
+          </div>
         </li>
         <li>
           <span class="rule-index" aria-hidden="true">3</span>
@@ -41,11 +43,12 @@
           <span class="rule-index" aria-hidden="true">4</span>
           <div>
             <h3>Starting the game</h3>
-            <ol>
+            <ol class="rule-steps">
               <li>Start at 20 life</li>
               <li>Draw 5 Cards, no Mulligans</li>
               <li>Player going first skips first draw</li>
             </ol>
+          </div>
         </li>
         <li>
           <span class="rule-index" aria-hidden="true">5</span>
