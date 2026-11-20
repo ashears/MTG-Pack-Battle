@@ -32,7 +32,7 @@ npm run build
 
 ## Banner artwork
 
-`assets/banner.webp` is the supplied planeswalker image. CSS displays it as a shallow banner (128px on larger screens, 96px on phones) without modifying the original image. The description follows the banner, then the six rules use a responsive three-, two-, or one-column layout.
+`assets/banner.webp` is the supplied planeswalker image. CSS displays it as a shallow banner (128px on larger screens, 96px on phones) without modifying the original image. A button over the banner opens `randomizer.html`, which contains the randomizer and token reference. The description follows the banner, then the six rules use a responsive three-, two-, or one-column layout.
 
 ## Expand the catalog
 
@@ -48,7 +48,7 @@ Settings are stored under `mtg-pack-battle.settings.v1` in localStorage. No acco
 
 The public repository is `ashears/MTG-Pack-Battle`. In **Settings → Pages → Build and deployment**, select **GitHub Actions**. Keep the project custom-domain field empty and do not add a `CNAME` here: the account's main Pages repository already owns `ashton.website`, so this project inherits `https://ashton.website/MTG-Pack-Battle/`.
 
-`.github/workflows/pages.yml` tests and stages the site for pushes and pull requests. Pushes to `main` (and manual workflow runs) publish `_site/` with GitHub Pages. Pull requests only validate. The workflow uses read-only repository contents and grants Pages write/OIDC permissions only to the deployment job. All site assets use relative paths; navigation uses anchors and needs no SPA rewrites. No paid hosting service is used.
+`.github/workflows/pages.yml` tests and stages the site for pushes and pull requests. Pushes to `main` (and manual workflow runs) publish `_site/` with GitHub Pages. Pull requests only validate. The workflow uses read-only repository contents and grants Pages write/OIDC permissions only to the deployment job. All site assets use relative paths; navigation uses relative page links and anchors and needs no SPA rewrites. No paid hosting service is used.
 
 To provision Pages with an authenticated GitHub CLI, once the repository exists:
 
