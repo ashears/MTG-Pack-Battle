@@ -32,7 +32,7 @@ npm run build
 
 ## Banner artwork
 
-`assets/banner.webp` is the supplied Planeswalker artwork. Both pages show five portrait crops from that image. The portrait rules in `styles.css` set the face coordinates and panel boundaries in source-image pixels. The Token randomizer button sits over the homepage banner. The Game rules button sits below the banner on the randomizer page.
+`assets/banner.webp` is the supplied Planeswalker artwork. Both pages show five portrait crops from that image. The portrait rules in `styles.css` set the face coordinates and panel boundaries in source-image pixels. The Token randomizer button sits beside the Rules heading. The Game rules button sits below the banner on the randomizer page.
 
 ## Expand the catalog
 
